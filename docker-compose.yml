@@ -1,0 +1,14 @@
+version: '3'
+services:
+  vida-pro-admin-web:
+     image: vida-pro-admin-web-img
+     container_name: vida-pro-admin-web
+     restart: always
+     environment:
+      - VIDA_PRO_SERVER_URL=http://localhost:3010
+     ports:
+      - 3009:80
+
+networks:
+  bridge:
+    driver: bridge
